@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name="autoTest" parallel="false">
+	<test name="testDemo">
+		<!--<packages>-->
+		<!--<package name="com.testproj.Demo"/>-->
+		<!--</packages>-->
+		<classes>
+			<class name="com.scala.autoTest.testDemo"></class>
+		</classes>
+	</test>
+</suite>
