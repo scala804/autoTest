@@ -1,4 +1,4 @@
-package com.scala.autoTest.bean.postApiTest;
+package com.scala.autoTest.bean;
 
 public class Users {
     private String name;

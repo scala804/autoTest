@@ -1,4 +1,4 @@
-package com.scala.autoTest.common.util;
+package com.scala.autoTest.base;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,7 +26,7 @@ public class TestBase {
         try{
             prop= new Properties();
             FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+
-                    "/src/main/java/testData/getApiTest"+File.separator+"getAPiTest.properties");
+                    "/src/main/java/com/scala/autotest/confige"+File.separator+"getAPiTest.properties");
             prop.load(fis);
 
         }catch (FileNotFoundException e) {

@@ -12,7 +12,8 @@ public class testDemo{
 
     @Test(groups = { "fast" })
     public void aFastTest() {
-        System.out.println("Fast test");
+       /* System.out.println("Fast test");*/
+        System.out.println(System.getProperty("user.dir"));
     }
 
     @Test(groups = { "slow" })

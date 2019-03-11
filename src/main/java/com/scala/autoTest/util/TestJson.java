@@ -1,9 +1,9 @@
-package com.scala.autoTest.common.util;
+package com.scala.autoTest.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
-public class TestJSon {
+public class TestJson {
     /**
      *
      * @param responseJson ,这个变量是拿到响应字符串通过json转换成json对象

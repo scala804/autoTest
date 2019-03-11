@@ -1,4 +1,4 @@
-package com.scala.autoTest.common.util;
+package com.scala.autoTest.restClient;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,20 +12,16 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
-import org.apache.log4j.Logger;
 
 
 public class RestClient {
 
-
-    final static Logger Log = Logger.getLogger(RestClient.class);
     //1. Get 请求方法
     public CloseableHttpResponse get(String url) throws ClientProtocolException, IOException {
     //创建一个可关闭的HttpClient对象
         CloseableHttpClient httpclient = HttpClients.createDefault();
      //创建一个HttpGet的请求对象
         HttpGet httpget = new HttpGet(url);
-       Log.info("httpget="+httpget);
      //执行请求,相当于postman上点击发送按钮，然后赋值给HttpResponse对象接收
         CloseableHttpResponse httpResponse = httpclient.execute(httpget);
 
