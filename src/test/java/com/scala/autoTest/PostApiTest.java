@@ -18,16 +18,22 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.scala.autoTest.util.*;
 
+
 import static org.testng.Assert.assertEquals;
 
 
 public class PostApiTest extends TestBase {
+
     TestBase testBase;
     String host;
     String url;
     RestClient restClient;
     CloseableHttpResponse closeableHttpResponse;
+/*
 
+    final static Logger Log = Logger.getLogger(RestClient.class);
+
+*/
 
     @BeforeClass
     public void setUp() {
