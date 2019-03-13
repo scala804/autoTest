@@ -1,37 +1,27 @@
 package com.scala.autoTest.base;
 
-import java.io.File;
-import java.util.Calendar;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
-import org.testng.IReporter;
-import org.testng.IResultMap;
-import org.testng.ISuite;
-import org.testng.ISuiteResult;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
-import org.testng.Reporter;
-import org.testng.xml.XmlSuite;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.ResourceCDN;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.model.TestAttribute;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.testng.*;
+import org.testng.xml.XmlSuite;
 
-public class ExtentTestngReporterListener implements IReporter{
+import java.io.File;
+import java.util.*;
+
+public class ExtentTestNGIReporterListener implements IReporter {
     //生成的路径以及文件名
     private static final String OUTPUT_FOLDER = "test-output/";
-    private static  final String FILE_NAME="index.html";
+    private static final String FILE_NAME = "index.html";
     private ExtentReports extent;
 
     @Override
-    public void generateReport(List<XmlSuite>  xmlSuites, List<ISuite> suites, String outputDirectory) {
+    public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
         init();
         boolean createSuiteNode = false;
         if(suites.size()>1){
@@ -48,10 +38,9 @@ public class ExtentTestngReporterListener implements IReporter{
             int suitePassSize=0;
             int suiteSkipSize=0;
             ExtentTest suiteTest=null;
-            //存在多个suite的情况下，在报告中将同一个一个suite的测试结果归为一类，创建一级节点。
+            //存在多个suite的情况下，在报告中将同一个suite的测试结果归为一类，创建一级节点。
             if(createSuiteNode){
                 suiteTest = extent.createTest(suite.getName()).assignCategory(suite.getName());
-
             }
             boolean createSuiteResultNode = false;
             if(result.size()>1){
@@ -103,7 +92,6 @@ public class ExtentTestngReporterListener implements IReporter{
             }
 
         }
-
         extent.flush();
     }
 
@@ -114,20 +102,21 @@ public class ExtentTestngReporterListener implements IReporter{
             reportDir.mkdir();
         }
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
-        htmlReporter.config().setDocumentTitle("api自动化测试报告");
-        htmlReporter.config().setReportName("api自动化测试报告");
-
+        // 设置静态文件的DNS
+        //怎么样解决cdn.rawgit.com访问不了的情况
+        htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
+        htmlReporter.config().setDocumentTitle("自动化测试报告");
+        htmlReporter.config().setReportName("API自动化测试报告");
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-        // htmlReporter.config().setTheme(Theme.STANDARD);
-        htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
+        htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setCSS(".node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setReportUsesManualConfiguration(true);
     }
 
-    private void buildTestNodes(ExtentTest extenttest,IResultMap tests, Status status) {
+    private void buildTestNodes(ExtentTest extenttest, IResultMap tests, Status status) {
         //存在父节点时，获取父节点的标签
         String[] categories=new String[0];
         if(extenttest != null ){
@@ -153,17 +142,12 @@ public class ExtentTestngReporterListener implements IReporter{
                 Object[] parameters = result.getParameters();
                 String name="";
                 //如果有参数，则使用参数的toString组合代替报告中的name
-//	                for(Object param:parameters){
-//	                    name+=param.toString();
-//	                }
-                //如果有参数只取第一个参数作test-name
-                for(int i=0;i<parameters.length;i++){
-                    name = parameters[0].toString();
+                for(Object param:parameters){
+                    name+=param.toString();
                 }
-
                 if(name.length()>0){
-                    if(name.length()>100){
-                        name= name.substring(0,100)+"...";
+                    if(name.length()>50){
+                        name= name.substring(0,49)+"...";
                     }
                 }else{
                     name = result.getMethod().getMethodName();
@@ -174,8 +158,6 @@ public class ExtentTestngReporterListener implements IReporter{
                     //作为子节点进行创建时，设置同父节点的标签一致，便于报告检索。
                     test = extenttest.createNode(name).assignCategory(categories);
                 }
-                //test.getModel().setDescription(description.toString());
-                //test = extent.createTest(result.getMethod().getMethodName());
                 for (String group : result.getMethod().getGroups())
                     test.assignCategory(group);
 
@@ -202,5 +184,4 @@ public class ExtentTestngReporterListener implements IReporter{
         calendar.setTimeInMillis(millis);
         return calendar.getTime();
     }
-
 }

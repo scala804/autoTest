@@ -26,7 +26,9 @@ public class TestBase {
         try{
             prop= new Properties();
             FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+
-                    "/src/main/java/com/scala/autotest/confige"+File.separator+"getAPiTest.properties");
+                    File.separator+"src"+File.separator+"main"+File.separator+"java"
+                    +File.separator+"com"+File.separator+"scala"+File.separator+"autotest"
+                    +File.separator+"confige"+File.separator+"getAPiTest.properties");
             prop.load(fis);
 
         }catch (FileNotFoundException e) {
