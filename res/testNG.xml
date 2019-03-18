@@ -1,11 +1,31 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<suite name="autoTest" parallel="false">
-	<test name="testDemo">
-		<!--<packages>-->
-		<!--<package name="com.testproj.Demo"/>-->
-		<!--</packages>-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Test">
 		<classes>
-			<class name="com.scala.autoTest.testDemo"></class>
+			<class name="com.scala.autoTest.reportTest">
+				<methods>
+					<include name="test1"></include>
+					<include name="test2"></include>
+				</methods>
+			</class>
+
+			<class name="com.scala.autoTest.extentReport">
+				<methods>
+					<include name="test1"></include>
+					<include name="test2"></include>
+					<include name="test3"></include>
+					<include name="getAPITest"></include>
+				</methods>
+			</class>
+			<class name="com.scala.autoTest.GetApiTest">
+			</class>
+			<class name="com.scala.autoTest.PostApiTest">
+			</class>
 		</classes>
 	</test>
+
+	<listeners>
+		<listener class-name="com.scala.autoTest.base.ExtentTestNGIReporterListener" />
+	</listeners>
 </suite>
