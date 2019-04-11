@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	<test name="Test">
+<suite name="TmpSuite">
+	<test name="TmpTest">
 		<classes>
-			<class name="com.scala.autoTest.reportTest">
+		<!--<class name="com.scala.autoTest.reportTest">
 				<methods>
 					<include name="test1"></include>
 					<include name="test2"></include>
 				</methods>
 			</class>
-
 			<class name="com.scala.autoTest.extentReport">
 				<methods>
 					<include name="test1"></include>
@@ -21,7 +20,25 @@
 			<class name="com.scala.autoTest.GetApiTest">
 			</class>
 			<class name="com.scala.autoTest.PostApiTest">
+			</class>-->
+			<!--<class name="com.scala.autoTest.test.PostApiTest">
+			</class>-->
+			<class name="com.scala.autoTest.test.reportTest">
+				<methods>
+					<include name="testcase1"></include>
+					<include name="testcase2"></include>
+					<include name="test3"></include>
+					<include name="getAPITest"></include>
+				</methods>
 			</class>
+			<!--<class name="com.scala.autoTest.test.extentReport">
+				<methods>
+					<include name="test1"></include>
+					<include name="test2"></include>
+					<include name="test3"></include>
+					<include name="getAPITest"></include>
+				</methods>
+			</class>-->
 		</classes>
 	</test>
 
