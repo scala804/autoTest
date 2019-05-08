@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "debugtrue",
+      "type": "java.lang.String",
+      "description": "Description for debugtrue."
+  }
+] }
