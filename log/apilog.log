@@ -1,3 +1,17 @@
-2019-03-18 08:41:08 237 INFO  GetApiTest:40 - URL=https://reqres.in/api/users?page=2
-2019-03-18 08:41:09 150 INFO  RestClient:30 - httpget=GET https://reqres.in/api/users?page=2 HTTP/1.1
-2019-03-18 08:41:10 566 INFO  GetApiTest:50 - responseString={"page":2,"per_page":3,"total":12,"total_pages":4,"data":[{"id":4,"first_name":"Eve","last_name":"Holt","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"},{"id":5,"first_name":"Charles","last_name":"Morris","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"},{"id":6,"first_name":"Tracey","last_name":"Ramos","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"}]}
+2019-05-09 15:49:24 979 INFO  SpringBootTestContextBootstrapper:308 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.scala.autoTest.autoTestCase.testDataConfig], using SpringBootContextLoader
+2019-05-09 15:49:24 983 INFO  AbstractContextLoader:264 - Could not detect default resource locations for test class [com.scala.autoTest.autoTestCase.testDataConfig]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-09 15:49:25 166 INFO  SpringBootTestContextBootstrapper:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1e178745, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@192c3f1e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26b3fd41, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7494f96a]
+2019-05-09 15:49:25 285 INFO  Version:21 - HV000001: Hibernate Validator 6.0.14.Final
+2019-05-09 15:49:25 509 INFO  testDataConfig:50 - Starting testDataConfig on linxupeng with PID 36460 (D:\scala804\project\autoTest\target\classes started by baihang in D:\scala804\project\autoTest)
+2019-05-09 15:49:25 510 INFO  testDataConfig:675 - No active profile set, falling back to default profiles: default
+2019-05-09 15:49:26 799 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8080 (http)
+2019-05-09 15:49:26 946 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 1424 ms
+2019-05-09 15:49:27 638 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:49:27 916 INFO  ThreadPoolTaskScheduler:171 - Initializing ExecutorService 'taskScheduler'
+2019-05-09 15:49:28 527 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-09 15:49:28 530 INFO  testDataConfig:59 - Started testDataConfig in 3.306 seconds (JVM running for 4.6)
+2019-05-09 15:49:28 622 INFO  DruidDataSource:1002 - {dataSource-1} inited
+2019-05-09 15:49:28 835 INFO  ThreadPoolTaskScheduler:208 - Shutting down ExecutorService 'taskScheduler'
+2019-05-09 15:49:28 836 INFO  ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:49:28 836 INFO  DruidDataSource:1885 - {dataSource-1} closing ...
+2019-05-09 15:49:28 841 INFO  DruidDataSource:1955 - {dataSource-1} closed
