@@ -1,10 +1,9 @@
 package com.scala.autoTest;
 
 import com.scala.autoTest.base.TestBase;
-import com.scala.autoTest.restClient.RestClient;
+import com.scala.autoTest.util.RestClient;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.testng.Reporter;
-import org.testng.annotations.Test;
 
 public class extentReport {
     String host;

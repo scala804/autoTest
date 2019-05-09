@@ -1,4 +1,4 @@
-package com.scala.autoTest.test;
+package com.scala.autoTest.autoTestCase;
 
 
 import com.scala.autoTest.AutoTestApplication;
@@ -20,8 +20,7 @@ public class testDataConfig extends AbstractTestNGSpringContextTests {
   private SysConfigDao sysConfigDao;
 
     @Test
-    public void testMethods()
-    {
+    public void testMethods() {
      int i=sysConfigDao.selectByPrimaryKey("diagnostics.allow_i_s_tables");
       System.out.println("11111++++++"+i);
     }

@@ -2,12 +2,10 @@ package com.scala.autoTest;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.logging.Logger;
 
 import com.scala.autoTest.bean.Users;
-import com.scala.autoTest.restClient.RestClient;
+import com.scala.autoTest.util.RestClient;
 import com.scala.autoTest.base.TestBase;
-import org.apache.commons.logging.Log;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;

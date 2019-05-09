@@ -23,14 +23,14 @@
 			</class>-->
 			<!--<class name="com.scala.autoTest.test.PostApiTest">
 			</class>-->
-			<class name="com.scala.autoTest.test.reportTest">
+			<!--<class name="com.scala.autoTest.test.reportTest">
 				<methods>
 					<include name="testcase1"></include>
 					<include name="testcase2"></include>
 					<include name="test3"></include>
 					<include name="getAPITest"></include>
 				</methods>
-			</class>
+			</class>-->
 			<!--<class name="com.scala.autoTest.test.extentReport">
 				<methods>
 					<include name="test1"></include>

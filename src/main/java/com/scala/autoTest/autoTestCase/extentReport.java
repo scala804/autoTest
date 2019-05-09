@@ -1,4 +1,4 @@
-package com.scala.autoTest.test;
+package com.scala.autoTest.autoTestCase;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;

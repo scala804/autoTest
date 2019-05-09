@@ -2,7 +2,7 @@ package com.scala.autoTest;
 
 import java.io.IOException;
 
-import com.scala.autoTest.restClient.RestClient;
+import com.scala.autoTest.util.RestClient;
 import com.scala.autoTest.base.TestBase;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;

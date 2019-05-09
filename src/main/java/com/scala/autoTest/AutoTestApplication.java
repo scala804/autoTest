@@ -1,17 +1,9 @@
 package com.scala.autoTest;
 
-import com.scala.autoTest.test.PostApiTest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.testng.TestNG;
-import org.testng.xml.XmlClass;
-import org.testng.xml.XmlSuite;
-import org.testng.xml.XmlTest;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @EnableScheduling
 @SpringBootApplication(exclude = MongoAutoConfiguration.class)

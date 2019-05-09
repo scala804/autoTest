@@ -1,9 +1,9 @@
-package com.scala.autoTest.test;
+package com.scala.autoTest.autoTestCase;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.scala.autoTest.base.TestBase;
-import com.scala.autoTest.restClient.RestClient;
+import com.scala.autoTest.util.RestClient;
 import com.scala.autoTest.util.TestJson;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;

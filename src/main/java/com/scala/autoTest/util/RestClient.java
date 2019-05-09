@@ -1,4 +1,4 @@
-package com.scala.autoTest.restClient;
+package com.scala.autoTest.util;
 
 import java.io.IOException;
 import java.util.HashMap;

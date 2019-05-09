@@ -1,6 +1,5 @@
-package com.scala.autoTest.test;
+package com.scala.autoTest.autoTestCase;
 
-import org.springframework.scheduling.annotation.Scheduled;
 import org.testng.annotations.*;
 
 public class reportTest {
