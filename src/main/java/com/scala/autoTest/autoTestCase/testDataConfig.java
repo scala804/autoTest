@@ -24,7 +24,7 @@ public class testDataConfig extends AbstractTestNGSpringContextTests {
     }*/
     @Test
     public void testsysConfigDaoMethods() {
-        SysConfig i= sysConfigMapper.selectByPrimaryKey("diagnostics.allow_i_s_tables");
-        System.out.println("11111++++++"+i);
+        SysConfig sysConfig= sysConfigMapper.selectByPrimaryKey("diagnostics.allow_i_s_tables");
+        System.out.println("getVariable___________________"+sysConfig.getVariable());
     }
 }
