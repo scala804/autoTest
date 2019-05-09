@@ -1,7 +1,5 @@
 package com.scala.autoTest;
 
-import com.scala.autoTest.dao.sys.SysConfigDao;
-import com.scala.autoTest.dao.sys.SysConfigMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
