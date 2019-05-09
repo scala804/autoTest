@@ -37,11 +37,11 @@ public class AutoTestApplication {
 		TestNG tng = new TestNG();
 		tng.setXmlSuites(suites);
 		tng.run();*/
-
+/*
 		TestNG testNG = new TestNG();
 		List<String> suites = new ArrayList<String>();
 		suites.add("res\\testNG.xml");//此处为xml的绝对路径
 		testNG.setTestSuites(suites);
-		testNG.run();
+		testNG.run();*/
 	}
 }
