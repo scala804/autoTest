@@ -1,4 +1,4 @@
-package com.scala.autoTest;
+package com.scala.autoTest.autoTestCase;
 
 import java.io.IOException;
 import java.util.HashMap;
