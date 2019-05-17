@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Test">
+		<!--<classes>
+			<class name="com.scala.autoTest.autoTestCase.testDataConfig">
+				<methods>
+					<include name="testSysConfigDaoMethods"></include>
+				</methods>
+			</class>
+		</classes>-->
+		<classes>
+			<!--<class name="com.scala.autoTest.autoTestCase.extentReport">
+				<methods>
+					<include name="test1"></include>
+					<include name="test2"></include>
+					<include name="test3"></include>
+				</methods>
+			</class>-->
+			<class name="com.scala.autoTest.autoTestCase.testDataConfig">
+				<methods>
+					<include name="testSysConfigDaoMethods"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<listeners>
+		<listener class-name="com.scala.autoTest.base.ExtentTestNGIReporterListener" />
+	</listeners>
+</suite>
