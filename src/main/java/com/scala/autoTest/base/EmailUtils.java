@@ -43,23 +43,14 @@ public class EmailUtils {
     @PostConstruct
     public void initParam () {
         auth = env.getProperty("mail.smtp.auth");
-        System.out.println(auth);
         host = env.getProperty("mail.host");
-        System.out.println(host);
         protocol = env.getProperty("mail.transport.protocol");
-        System.out.println(protocol);
         port = env.getProperty("mail.smtp.port", Integer.class);
-        System.out.println(port);
         authName = env.getProperty("mail.auth.name");
-        System.out.println(authName);
         password = env.getProperty("mail.auth.password");
-        System.out.println(password);
         charset = env.getProperty("mail.send.charset");
-        System.out.println(charset);
         isSSL = env.getProperty("mail.is.ssl", Boolean.class);
-        System.out.println(isSSL);
         timeout = env.getProperty("mail.smtp.timeout");
-        System.out.println(timeout);
     }
 
 

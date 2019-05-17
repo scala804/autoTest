@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @description:
  */
 @RestController
-public class UserController {
-
+public class SendEmail {
 
     @RequestMapping("/sendEmail")
     public String sendEmail() throws JsonProcessingException {
-        boolean isSend = EmailUtils.sendEmail("这是一封测试邮件", new String[]{"downline@yeah.net"}, null, "<h3><a href='http://www.baidu.com'>百度一下，你就知道</a></h3>", null);
+        boolean isSend = EmailUtils.sendEmail("这是一封测试邮件", new String[]{"downline@yeah.net"}, null, "test-output//index.html", null);
         return "发送邮件:" + isSend;
     }
 }
