@@ -17,7 +17,7 @@ import java.util.List;
 @EnableScheduling   // 1.开启定时任务
 @EnableAsync        // 2.开启多线程
 public class MultithreadScheduleTask {
-
+/*
     @Async
     @Scheduled(fixedDelay = 6000)
     public void testSix()throws InterruptedException {
@@ -36,5 +36,5 @@ public class MultithreadScheduleTask {
         suites.add(testNgPath);
         testNG.setTestSuites(suites);
         testNG.run();
-    }
+    }*/
 }

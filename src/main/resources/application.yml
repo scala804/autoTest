@@ -9,3 +9,19 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/sys?useUnicode=true&characterEncoding=utf8
       username: root
       password: 123456
+mail:
+  smtp:
+    auth: true
+    port: 465
+    timeout: 5000
+  transport:
+    protocol: smtp
+  send:
+    charset: UTF-8
+  is:
+    ssl: true
+  host: smtp.163.com
+  auth:
+    name: scala804@163.com
+    password: ybh3254498
+
