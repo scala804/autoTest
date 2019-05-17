@@ -9,6 +9,10 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/sys?useUnicode=true&characterEncoding=utf8
       username: root
       password: 123456
+      # multipart config
+      #默认支持文件上传
+
+
 mail:
   smtp:
     auth: true
@@ -24,4 +28,5 @@ mail:
   auth:
     name: scala804@163.com
     password: ybh3254498
+
 
